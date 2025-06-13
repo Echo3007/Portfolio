@@ -24,10 +24,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white antialiased font-sans")}
+        className={twMerge(inter.variable, calistoga.variable, "min-h-screen text-black antialiased font-sans")} style={{
+          backgroundImage:
+            'linear-gradient(to bottom right, #f8a5a5, #fcd5a5, #fff9a5, #b6e2b6, #a5c5ff, #d1a5e9)'
+        }}
       >
+
         {children}
       </body>
     </html>
