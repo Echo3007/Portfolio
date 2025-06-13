@@ -1,11 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {Inter, Calistoga} from 'next/font/google';
+import { Inter, Calistoga } from 'next/font/google';
+import { twMerge } from 'tailwind-merge';
 
 
-const inter = Inter({ subsets:['latin'], variable: '--font-sans'});
-const calistoga = Calistoga({ subsets:['latin'], variable: '--font-serif', weight:["400"]});
-import next from "next";
+const inter = Inter({ subsets: ['latin'], variable: "--font-sans" });
+const calistoga = Calistoga({ subsets: ['latin'], variable: "--font-serif", weight: ["400"] });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className="bg-gray-900 text-white antialiased"
+        className={twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white antialiased font-sans")}
       >
         {children}
       </body>
