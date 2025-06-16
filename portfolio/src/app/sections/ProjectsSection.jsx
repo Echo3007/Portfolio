@@ -1,4 +1,7 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import { SectionHeader } from '../components/SectionHeader';
+import { Card } from '../components/Card';
+
 
 const portfolioProjects = [
     {
@@ -31,25 +34,16 @@ export const ProjectsSection = () => {
     return (
         <section className='pb-16 lg:py-12'>
             <div className="container mx-auto px-4">
-                <div className='flex justify-center'>
-                    <p className='uppercase font-semibold tracking-widest bg-gradient-to-r from-red-500 
-                    via-yellow-400 via-green-400 via-blue-500 to-purple-500 
-                    bg-clip-text text-transparent text-center text-shadow-xs md:text-lg lg:text-xl'>Real-World Results</p>
-                </div>
-                <h2 className='font-serif text-3xl md:text-5xl  text-center mt-6'>Featured Projects</h2>
-                <p className='text-center md:text-lg lg:text-xl text-black/80 mt-4 max-w-md mx-auto'>Some text content here</p>
+                <SectionHeader eyebrow={"Real-World Results"} title={"Featured Projects"} description={"Some text content here"} />
                 <div className='flex flex-col md:mt-20 mt-10 gap-20'>
                     {portfolioProjects.map(project => (
-                        <div key={project.title} className='bg-white/80 rounded-3xl relative z-0 
-                        overflow-hidden after:z-10 
-                        after:content-[""] after:absolute after:inset-0 
-                        after:outline-gray-800 after:outline-2 
-                        after:outline after:-outline-offset-2 after:rounded-3xl 
-                        px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none'>
+                        <Card key={project.title} className=' 
+                        px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20'>
                             <div className='lg:grid lg:grid-cols-2 lg:gap-16' >
                                 <div className='lg:pb-16'>
                                     <div className='bg-gradient-to-r from-red-500 via-yellow-400 via-green-400 via-blue-500 to-purple-500 inline-flex 
-                                    gap-2 font-bold uppercase tracking-widest text-sm md:text-base lg:text-sm text-transparent bg-clip-text text-shadow-xs'>
+                                    gap-2 font-bold uppercase tracking-widest text-sm md:text-base lg:text-sm 
+                                    text-transparent bg-clip-text text-shadow-xs'>
                                         <span>Nome corso, materia etc</span>
                                         <span>&bull;</span>
                                         <span>{project.year}</span>
@@ -60,7 +54,12 @@ export const ProjectsSection = () => {
                                     <ul className='flex flex-col gap-4 mt-4 md:mt-5'>
                                         {project.techStack.map(techStack => (
                                             <li key={techStack.title} className='flex gap-2 text-sm md:text-xl lg:text-lg text-black/80'>
-                                                <div className="bg-green-500 size-4 rounded-full"></div>
+                                                <div >
+                                                    <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path fillRule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z" clipRule="evenodd" />
+                                                    </svg>
+
+                                                </div>
 
                                                 <span>{techStack.title}</span>
                                             </li>
@@ -74,7 +73,12 @@ export const ProjectsSection = () => {
                                     <a href={project.link}>
                                         <button className='bg-black mt-8 text-white md:text-xl lg:text-lg h-12 w-full md:w-auto px-6 rounded-xl font-semibold 
                                         inline-flex items-center justify-center gap-2'>
+
                                             <span>View GitHub</span>
+                                            <svg className="w-6 h-6 text-white dark:text-white rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v13m0-13 4 4m-4-4-4 4" />
+                                            </svg>
+
                                         </button>
                                     </a>
                                 </div>
@@ -83,7 +87,7 @@ export const ProjectsSection = () => {
                                 </div>
                             </div>
 
-                        </div>
+                        </Card>
                     ))}
                 </div>
             </div>
