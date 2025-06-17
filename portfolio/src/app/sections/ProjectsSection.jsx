@@ -35,10 +35,10 @@ export const ProjectsSection = () => {
         <section className='pb-16 lg:py-12'>
             <div className="container mx-auto px-4">
                 <SectionHeader eyebrow={"Real-World Results"} title={"Featured Projects"} description={"Some text content here"} />
-                <div className='flex flex-col md:mt-20 mt-10 gap-20'>
+                <div className='flex flex-col md:mt-20 mt-10 gap-20 lg:ml-30 lg:mr-30'>
                     {portfolioProjects.map(project => (
                         <Card key={project.title} className=' 
-                        px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20'>
+                        px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 '>
                             <div className='lg:grid lg:grid-cols-2 lg:gap-16' >
                                 <div className='lg:pb-16'>
                                     <div className='bg-gradient-to-r from-red-500 via-yellow-400 via-green-400 via-blue-500 to-purple-500 inline-flex 
@@ -49,11 +49,11 @@ export const ProjectsSection = () => {
                                         <span>{project.year}</span>
                                     </div>
 
-                                    <h3 className='font-serif text-2xl mt-2 md:mt-5 md:text-4xl lg:text-3xl'>{project.title}</h3>
+                                    <h3 className='font-serif text-2xl mt-2 md:mt-5 md:text-4xl lg:text-xl'>{project.title}</h3>
                                     <hr className='border-t-2 border-black/10 mt-4 md:mt-5' />
                                     <ul className='flex flex-col gap-4 mt-4 md:mt-5'>
                                         {project.techStack.map(techStack => (
-                                            <li key={techStack.title} className='flex gap-2 text-sm md:text-xl lg:text-lg text-black/80'>
+                                            <li key={techStack.title} className='flex gap-2 text-sm md:text-xl lg:text-sm text-black/80'>
                                                 <div >
                                                     <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                                         <path fillRule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z" clipRule="evenodd" />
@@ -67,11 +67,11 @@ export const ProjectsSection = () => {
                                     </ul>
                                     <hr className='border-t-2 border-black/10 mt-4 md:mt-5' />
 
-                                    <div className='mt-4 md:mt-5 md:text-xl lg:text-lg'>
+                                    <div className='mt-4 md:mt-5 md:text-xl lg:text-sm'>
                                         <p>Description of Project</p>
                                     </div>
                                     <a href={project.link}>
-                                        <button className='bg-black mt-8 text-white md:text-xl lg:text-lg h-12 w-full md:w-auto px-6 rounded-xl font-semibold 
+                                        <button className='bg-black mt-8 text-white md:text-xl lg:text-sm h-12 w-full md:w-auto lg:h-10 px-6 rounded-xl font-semibold 
                                         inline-flex items-center justify-center gap-2'>
 
                                             <span>View GitHub</span>
@@ -83,7 +83,7 @@ export const ProjectsSection = () => {
                                     </a>
                                 </div>
                                 <div className='relative'>
-                                    <Image alt={project.title} className='mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none'></Image>
+                                    <img src="null" width={0} height={0} alt={project.title} className='mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none'></img>
                                 </div>
                             </div>
 
