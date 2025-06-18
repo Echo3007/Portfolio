@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import { SectionHeader } from '../components/SectionHeader';
 import { Card } from '../components/Card';
-
+import app_ecommerce from '../assets/app_ecommerce.png';
+import ecommerce_website from '../assets/ecommerce_website.png';
 
 const portfolioProjects = [
     {
@@ -12,8 +13,9 @@ const portfolioProjects = [
             { title: "Firebase" },
             { title: "Java" }
         ],
-        link: "GitHubLink",
-        image: "someImage"
+        link: "https://github.com/Echo3007/FanArt_ecommerce_Android/tree/master",
+        linkYoutube: "https://www.youtube.com/watch?v=9fRwIvrSFYE",
+        image: app_ecommerce,
     },
     {
         year: "2023",
@@ -24,7 +26,7 @@ const portfolioProjects = [
             { title: "Java" }
         ],
         link: "GitHubLink",
-        image: "someImage"
+        image: ecommerce_website,
     },
 ]
 
@@ -35,7 +37,7 @@ export const ProjectsSection = () => {
         <section className='pb-16 lg:py-12'>
             <div className="container mx-auto px-4">
                 <SectionHeader eyebrow={"Real-World Results"} title={"Featured Projects"} description={"Some text content here"} />
-                <div className='flex flex-col md:mt-20 mt-10 gap-20 lg:ml-30 lg:mr-30'>
+                <div className='flex flex-col md:mt-20 mt-10 gap-20 '>
                     {portfolioProjects.map(project => (
                         <Card key={project.title} className=' 
                         px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 '>
@@ -70,20 +72,35 @@ export const ProjectsSection = () => {
                                     <div className='mt-4 md:mt-5 md:text-xl lg:text-sm'>
                                         <p>Description of Project</p>
                                     </div>
-                                    <a href={project.link}>
-                                        <button className='bg-black mt-8 text-white md:text-xl lg:text-sm h-12 w-full md:w-auto lg:h-10 px-6 rounded-xl font-semibold 
+                                    <div className='flex flex-col'>
+                                        <a href={project.link}>
+                                            <button className='bg-black mt-8 text-white md:text-xl lg:text-sm h-12 w-full md:w-auto lg:h-10 px-6 rounded-xl font-semibold 
                                         inline-flex items-center justify-center gap-2'>
 
-                                            <span>View GitHub</span>
-                                            <svg className="w-6 h-6 text-white dark:text-white rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v13m0-13 4 4m-4-4-4 4" />
-                                            </svg>
+                                                <span>View GitHub</span>
+                                                <svg className="w-6 h-6 text-white dark:text-white rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v13m0-13 4 4m-4-4-4 4" />
+                                                </svg>
 
-                                        </button>
-                                    </a>
+                                            </button>
+                                        </a>
+                                        {project.linkYoutube && (
+                                            <a href={project.linkYoutube}>
+                                                <button className='bg-black mt-8 text-white md:text-xl lg:text-sm h-12 w-full md:w-auto lg:h-10 px-6 rounded-xl font-semibold 
+                                        inline-flex items-center justify-center gap-2'>
+
+                                                    <span>View Youtube Video</span>
+                                                    <svg className="w-6 h-6 text-white dark:text-white rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v13m0-13 4 4m-4-4-4 4" />
+                                                    </svg>
+
+                                                </button>
+                                            </a>)}
+                                    </div>
+
                                 </div>
                                 <div className='relative'>
-                                    <img src="null" width={0} height={0} alt={project.title} className='mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none'></img>
+                                    <Image src={project.image} alt={project.title} className='mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-xl'></Image>
                                 </div>
                             </div>
 
