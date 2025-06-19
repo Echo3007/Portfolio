@@ -4,7 +4,7 @@ export const HeroSection = () => {
     return (
         <div className="py-32 relative z-0">
 
-            <div className="container mx-auto px-4">
+            <div className="container">
                 <div className="flex flex-col justify-center items-center">
                     {/* //Image insertion here */}
                     <img></img>
@@ -21,12 +21,12 @@ export const HeroSection = () => {
             </div>
             <div className="flex flex-col gap-4 md:flex-row justify-center items-center mt-8 ">
                 <button className="inline-flex items-center gap-2 md:text-xl lg:text-sm border border-white bg-white/25 px-6 h-12 lg:h-10 rounded-xl">
-                    <span className="font-semibold">Explore work</span>
+                    <span className="font-semibold lg:text-lg">Explore work</span>
                 </button>
                 <button className="inline-flex items-center md:text-lg lg:text-sm
                 gap-2 border border-white bg-white text-gray-900 px-6 h-12 lg:h-10 rounded-xl">
-                    <span>Emoji here</span>
-                    <span className="font-semibold">Connect</span>
+                    <span className="lg:text-xl">👋</span>
+                    <span className="font-semibold lg:text-lg">Connect</span>
                 </button>
             </div>
         </div>

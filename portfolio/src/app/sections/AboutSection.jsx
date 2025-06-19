@@ -67,7 +67,7 @@ const hobbies = [
     {
         title: "Going To The Beach",
         emoji: "🏖️",
-        left: '2%',
+        left: '30%',
         top: '75%'
     },
     {
@@ -82,7 +82,7 @@ const hobbies = [
 export const AboutSection = () => {
     return (
         <div className='py-16'>
-            <div className='container mx-auto p-4'>
+            <div className='container'>
                 <SectionHeader eyebrow={"About Me"} title={"A Glimpse Into My World"} description={"Some description here"} />
                 <div className='mt-20 flex flex-col gap-8 '>
                     <div className='grid md:grid-cols-4 md:gap-8 gap-8'>
@@ -128,18 +128,20 @@ export const AboutSection = () => {
 
                         </Card>
                     </div>
-                    <Card className='h-[320px] p-0 relative '>
-                        <Image src={mapImage} alt='Map'
-                            className='h-full w-full object-cover oj'></Image>
-                        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/5
-                        rounded-full bg-gradient-to-r from-emerald-300 to-sky-400
-                        after:content-[""] after:absolute after:inset-0 after:outline after:outline-2 
-                        after:-outline-offset after:rounded-full after:outline-gray-900/30'>
-                            <Image src={smileMemoji} ALT='Smile Memoji'
-                                className='size-20'></Image>
-                        </div>
+                    <div className='md:flex md:justify-center'>
+                        <Card className='h-[320px] lg:w-[50%] p-0 relative '>
+                            <Image src={mapImage} alt='Map'
+                                className='h-full w-full object-cover '></Image>
+                            <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/5
+                            rounded-full bg-gradient-to-r from-emerald-300 to-sky-400
+                            after:content-[""] after:absolute after:inset-0 after:outline after:outline-2 
+                            after:-outline-offset after:rounded-full after:outline-gray-900/30'>
+                                <Image src={smileMemoji} alt='Smile Memoji'
+                                    className='size-20'></Image>
+                            </div>
 
-                    </Card>
+                        </Card>
+                    </div>
 
                 </div>
             </div>

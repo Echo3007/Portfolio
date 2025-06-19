@@ -35,7 +35,7 @@ const portfolioProjects = [
 export const ProjectsSection = () => {
     return (
         <section className='pb-16 lg:py-12'>
-            <div className="container mx-auto px-4">
+            <div className="container">
                 <SectionHeader eyebrow={"Real-World Results"} title={"Featured Projects"} description={"Some text content here"} />
                 <div className='flex flex-col mt-20 gap-8 '>
                     {portfolioProjects.map(project => (
