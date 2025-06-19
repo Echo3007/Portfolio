@@ -37,7 +37,7 @@ export const ProjectsSection = () => {
         <section className='pb-16 lg:py-12'>
             <div className="container mx-auto px-4">
                 <SectionHeader eyebrow={"Real-World Results"} title={"Featured Projects"} description={"Some text content here"} />
-                <div className='flex flex-col md:mt-20 mt-10 gap-20 '>
+                <div className='flex flex-col mt-20 gap-8 '>
                     {portfolioProjects.map(project => (
                         <Card key={project.title} className=' 
                         px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 '>
