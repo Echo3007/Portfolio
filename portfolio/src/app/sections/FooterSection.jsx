@@ -15,13 +15,14 @@ export const FooterSection = () => {
     return (
         <div>
             <div className="container">
-                <div className='border-t border-white/15 py-5 text-sm'>
-                    <div>&copy; 2025. All rights reserved.</div>
-                    <nav>
+                <div className='border-t border-black/25 py-5 text-sm flex flex-col md:flex-row items-center gap-4'>
+                    <div className='text-black/80'>&copy; 2025. All rights reserved.</div>
+                    <nav className='flex flex-col items-center gap-3'>
                         {footerLinks.map(link => (
-                            <a href='#' key={link.title}>
-                                <span>{link.title}</span>
-                                <ArrowComponent></ArrowComponent>
+                            <a href='#' key={link.title}
+                                className='inline-flex items-center gap-1.5'>
+                                <span className='font-semibold'>{link.title}</span>
+                                <ArrowComponent className='h-6 w-6 text-black'></ArrowComponent>
                             </a>
 
                         ))}

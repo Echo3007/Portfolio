@@ -113,7 +113,7 @@ export const AboutSection = () => {
 
                             <div className='relative flex-1'>
                                 {hobbies.map(hobby => (
-                                    <div key={hobbies.title} className='inline-flex items-center gap-2 px-6  bg-gradient-to-r 
+                                    <div key={hobby.title} className='inline-flex items-center gap-2 px-6  bg-gradient-to-r 
                                     from-emerald-300 to-sky-400 rounded-full py-1.5 absolute'
                                         style={{
                                             left: hobby.left,
