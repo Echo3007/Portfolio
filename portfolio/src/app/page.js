@@ -5,6 +5,7 @@ import { TapeSection } from "./sections/TapeSection";
 import { AboutSection } from "./sections/AboutSection";
 import { ContactSection } from "./sections/ContactSection";
 import { FooterSection } from "./sections/FooterSection";
+import { ContactForm } from "./components/ContactForm";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
       <AboutSection />
       <ContactSection />
       <FooterSection />
+      <ContactForm></ContactForm>
+
 
     </div>
   )
