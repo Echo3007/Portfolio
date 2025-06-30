@@ -28,6 +28,7 @@ const portfolioProjects = [
         link: "GitHubLink",
         image: ecommerce_website,
     },
+
 ]
 
 
@@ -38,9 +39,10 @@ export const ProjectsSection = () => {
             <div className="container">
                 <SectionHeader eyebrow={"Real-World Results"} title={"Featured Projects"} description={"Some text content here"} />
                 <div className='flex flex-col mt-20 gap-8 '>
-                    {portfolioProjects.map(project => (
+                    {portfolioProjects.map((project, projectIndex) => (
                         <Card key={project.title} className=' 
-                        px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 '>
+                        px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky '
+                            style={{ top: `calc(64px + ${projectIndex * 40}px)`, }}>
                             <div className='lg:grid lg:grid-cols-2 lg:gap-16' >
                                 <div className='lg:pb-16'>
                                     <div className='bg-gradient-to-r from-red-500 via-yellow-400 via-green-400 via-blue-500 to-purple-500 inline-flex 

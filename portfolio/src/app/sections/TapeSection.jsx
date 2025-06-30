@@ -34,7 +34,9 @@ export const TapeSection = () => {
         <div className="py-16 overflow-x-clip">
             <div className="bg-gradient-to-r from-emerald-300 to-sky-400  -rotate-3 -mx-1">
                 <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                    <div className="flex flex-none gap-4 py-3 lg:gap-6">
+                    <div className="flex flex-none gap-4 py-3 lg:gap-6 -translate-x-1/2 animate-move-left
+                    "
+                        style={{ animationDuration: "120s" }}>
                         {repeatedWords.map((word, index) => (
                             <div key={index} className="inline-flex gap-4 items-center" >
                                 <span className="text-gray-800 uppercase font-extrabold text-sm">{word}</span>
