@@ -46,7 +46,7 @@ export const Header = () => {
     }, []);
 
     return (
-        <div className="flex justify-center items-center relative top-3 lg:sticky z-30 ">
+        <div className="flex justify-center items-center relative top-3 sticky z-30 ">
             <nav className="flex gap-1 border border-white/80 rounded-full bg-sky-200/50 backdrop-blur">
                 {navItems.map(({ href, label }) => (
                     <PageLinks

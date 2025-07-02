@@ -86,10 +86,10 @@ export const AboutSection = () => {
                 <SectionHeader eyebrow={"About Me"} title={"A Glimpse Into My World"} description={"Some description here"} />
                 <div className='mt-20 flex flex-col gap-8 '>
                     <div className='grid md:grid-cols-4 md:gap-8 gap-8'>
-                        <Card className=" h-[320px] md:col-span-2">
+                        <Card className=" h-[320px] md:col-span-2 ">
                             <CardHeader
                                 title='My Toolbox'
-                                description='Some text here'
+                                description='Some of the tools that I often use.'
                                 className=''
                             ></CardHeader>
                             <ToolboxItems
@@ -107,7 +107,7 @@ export const AboutSection = () => {
                         <Card className="h-[320px] flex flex-col md:col-span-2">
                             <CardHeader
                                 title='Beyond The Code'
-                                description='Some Text, Interests and Hobbies'
+                                description='I love making sure I can allocate some free time to any of my hobbies every day.'
                                 className=''
                             ></CardHeader>
 

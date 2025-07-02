@@ -1,16 +1,20 @@
 import { PageLinks } from '../components/PageLinks';
+import ProfilePic from '../assets/profilePic.jpeg';
+import Image from 'next/image';
+
+
 
 export const HeroSection = () => {
 
     return (
-        <div id="hero" className="py-32 relative z-0">
+        <div id="hero" className="py-16 relative z-0">
 
             <div className="container">
                 <div className="flex flex-col justify-center items-center">
                     {/* //Image insertion here */}
-                    <img></img>
+                    <Image src={ProfilePic} alt="Girl headshot picture with Westminister (London) in the background." width={200} height={100} className="rounded-full" />
 
-                    <div className="bg-white/80 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
+                    <div className="bg-white/80 border border-gray-800 mt-8 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
                         <div className="bg-green-500 size-2.5 relative rounded-full ">
                             <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
                         </div>
@@ -18,8 +22,8 @@ export const HeroSection = () => {
                     </div>
                 </div>
                 <div className="max-w-lg mx-auto ">
-                    <h1 className="font-serif text-3xl md:text-5xl lg:text-3xl text-center mt-8 tracking-wide">Some title here</h1>
-                    <p className="mt-4 text-center text-black/80 lg:text-sm md:text-xl">Some description here</p>
+                    <h1 className="font-serif text-3xl md:text-5xl lg:text-3xl text-center mt-8 tracking-wide">Angela Pellillo</h1>
+                    <p className="mt-5 text-center text-black/80 lg:text-lg md:text-xl">First Class Degree in BSc(Hons) Computer Science at University Of West London.<br />Junior Java Backend Developer.<br />Currently working on personal projects and looking for opportunities to broaden my skillset and knowledge gained during the my degree.</p>
                 </div>
             </div>
             <div className="flex flex-col gap-4 md:flex-row justify-center items-center mt-8 ">

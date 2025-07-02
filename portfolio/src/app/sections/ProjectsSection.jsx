@@ -17,6 +17,12 @@ const portfolioProjects = [
         link: "https://github.com/Echo3007/FanArt_ecommerce_Android/tree/master",
         linkYoutube: "https://www.youtube.com/watch?v=9fRwIvrSFYE",
         image: app_ecommerce,
+        description: <p>Developed an e-commerce platform for purchasing printed copies of
+            digital art, primarily focusing on fan art and fan fiction.<br /><br /><b>Features:</b>Secure user authentication, profile management,
+            intuitive shopping UI with category filters, and seamless
+            checkout.<br /><br /><b>Challenges:</b>Resolved Firebase database structure issues and
+            enhanced stock updates and checkout functionalities.<br /><br /><b>Future Enhancements:</b>Implement order history, expand product
+            categories, and validate payment methods.</p>,
     },
     {
         year: "2023",
@@ -28,6 +34,10 @@ const portfolioProjects = [
         ],
         link: "https://github.com/SallyGM/grp-ecommerce",
         image: ecommerce_website,
+        description: <p>Developed "Game Busters", an e-commerce platform for purchasing video game keys, using Scrum and Agile methodologies.<br /><br /><b>Features:</b>Secure user authentication, dynamic basket, guest
+            functionality, favourite lists, and seamless checkout.<br /><br /><b>Project Management:</b>Utilized Gantt charts, risk register, sprints, and
+            rotating Scrum Masters.<br /><br /><b>Future Enhancements:</b>Multifactor authentication, improved
+            search, admin panel. </p>,
     },
 
 ]
@@ -39,11 +49,11 @@ export const ProjectsSection = () => {
         <section id="projects" className='pb-16 lg:py-12'>
             <div className="container">
                 <SectionHeader eyebrow={"Real-World Results"} title={"Featured Projects"} description={"Some text content here"} />
-                <div className='flex flex-col mt-20 gap-8 '>
+                <div className='flex flex-col mt-20 gap-32 '>
                     {portfolioProjects.map((project, projectIndex) => (
                         <Card key={project.title} className=' 
                         px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky '
-                            style={{ top: `calc(64px + ${projectIndex * 150}px)`, }}>
+                            style={{ top: `calc(64px + ${projectIndex * 3000}px)`, }}>
                             <div className='lg:grid lg:grid-cols-2 lg:gap-16' >
                                 <div className='lg:pb-16'>
                                     <div className='bg-gradient-to-r from-red-500 via-yellow-400 via-green-400 via-blue-500 to-purple-500 inline-flex 
@@ -73,7 +83,7 @@ export const ProjectsSection = () => {
                                     <hr className='border-t-2 border-black/10 mt-4 md:mt-5' />
 
                                     <div className='mt-4 md:mt-5 md:text-xl lg:text-sm'>
-                                        <p>Description of Project</p>
+                                        <p>{project.description}</p>
                                     </div>
                                     <div className='flex flex-col'>
                                         <PageLinks href={project.link}>
