@@ -3,6 +3,7 @@ import { SectionHeader } from '../components/SectionHeader';
 import { Card } from '../components/Card';
 import app_ecommerce from '../assets/app_ecommerce.png';
 import ecommerce_website from '../assets/ecommerce_website.png';
+import { PageLinks } from '../components/PageLinks';
 
 const portfolioProjects = [
     {
@@ -25,7 +26,7 @@ const portfolioProjects = [
             { title: "Firebase" },
             { title: "Java" }
         ],
-        link: "GitHubLink",
+        link: "https://github.com/SallyGM/grp-ecommerce",
         image: ecommerce_website,
     },
 
@@ -35,14 +36,14 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
     return (
-        <section className='pb-16 lg:py-12'>
+        <section id="projects" className='pb-16 lg:py-12'>
             <div className="container">
                 <SectionHeader eyebrow={"Real-World Results"} title={"Featured Projects"} description={"Some text content here"} />
                 <div className='flex flex-col mt-20 gap-8 '>
                     {portfolioProjects.map((project, projectIndex) => (
                         <Card key={project.title} className=' 
                         px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky '
-                            style={{ top: `calc(64px + ${projectIndex * 40}px)`, }}>
+                            style={{ top: `calc(64px + ${projectIndex * 150}px)`, }}>
                             <div className='lg:grid lg:grid-cols-2 lg:gap-16' >
                                 <div className='lg:pb-16'>
                                     <div className='bg-gradient-to-r from-red-500 via-yellow-400 via-green-400 via-blue-500 to-purple-500 inline-flex 
@@ -75,7 +76,7 @@ export const ProjectsSection = () => {
                                         <p>Description of Project</p>
                                     </div>
                                     <div className='flex flex-col'>
-                                        <a href={project.link}>
+                                        <PageLinks href={project.link}>
                                             <button className='bg-black mt-8 text-white md:text-xl lg:text-sm h-12 w-full md:w-auto lg:h-10 px-6 rounded-xl font-semibold 
                                         inline-flex items-center justify-center gap-2'>
 
@@ -85,9 +86,9 @@ export const ProjectsSection = () => {
                                                 </svg>
 
                                             </button>
-                                        </a>
+                                        </PageLinks>
                                         {project.linkYoutube && (
-                                            <a href={project.linkYoutube}>
+                                            <PageLinks href={project.linkYoutube}>
                                                 <button className='bg-black mt-8 text-white md:text-xl lg:text-sm h-12 w-full md:w-auto lg:h-10 px-6 rounded-xl font-semibold 
                                         inline-flex items-center justify-center gap-2'>
 
@@ -97,7 +98,7 @@ export const ProjectsSection = () => {
                                                     </svg>
 
                                                 </button>
-                                            </a>)}
+                                            </PageLinks>)}
                                     </div>
 
                                 </div>

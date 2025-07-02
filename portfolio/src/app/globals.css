@@ -90,9 +90,38 @@
 
 @layer utilities {
   .container {
-    @apply lg:max-w-5xl;
+    @apply lg:max-w-4xl;
     @apply px-4;
     @apply mx-auto;
+
+    
+  }
+}
+
+label{
+  font-family: var(--font-sans);
+
+  @screen md{
+    label{
+      width: 8rem;
+    }
+  }
+  
+}
+
+
+input{
+  font-family: var(--font-sans);
+ 
+}
+
+@layer utilities{
+  .input-box{
+    @apply flex flex-col gap-1;
+
+    @screen md{
+      @apply flex flex-row items-center gap-4
+    }
   }
 }
 

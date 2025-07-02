@@ -1,13 +1,15 @@
 import { ArrowComponent } from '../components/ArrowComponent';
+import { PageLinks } from '../components/PageLinks';
+
 
 const footerLinks = [
     {
         title: 'LinkedIn',
-        link: "#",
+        link: "https://www.linkedin.com/in/angela-pellillo-846a55157/",
     },
     {
         title: 'YouTube',
-        link: "#",
+        link: "https://www.youtube.com/@AngelaPellillo",
     }
 ];
 
@@ -20,11 +22,11 @@ export const FooterSection = () => {
                     <div className='text-black/80'>&copy; 2025. All rights reserved.</div>
                     <nav className='flex flex-col md:flex-row items-center gap-3'>
                         {footerLinks.map(link => (
-                            <a href='#' key={link.title}
+                            <PageLinks href={link.link} key={link.title}
                                 className='inline-flex items-center gap-1.5'>
                                 <span className='font-semibold'>{link.title}</span>
                                 <ArrowComponent className='h-6 w-6 text-black'></ArrowComponent>
-                            </a>
+                            </PageLinks>
 
                         ))}
 
