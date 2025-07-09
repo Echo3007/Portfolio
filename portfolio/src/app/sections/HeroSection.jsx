@@ -29,13 +29,13 @@ export const HeroSection = () => {
             <div className="flex flex-col gap-4 md:flex-row justify-center items-center mt-8 ">
                 <PageLinks href={"https://github.com/Echo3007"}>
                     <button className="inline-flex items-center gap-2 md:text-xl lg:text-sm border border-white bg-white/25 px-6 h-12 lg:h-10 rounded-xl
-                    hover:bg-green-400 hover:text-white active:scale-95 active:translate-y-0.5 active:bg-green-600 duration-150 ease-in-out">
+                    hover:bg-green-400 hover:scale-110 hover:text-white active:scale-95 active:translate-y-0.5 active:bg-green-600 duration-150 ease-in-out">
                         <span className="font-semibold lg:text-lg">Explore work</span>
                     </button>
                 </PageLinks>
                 <PageLinks href={"https://www.linkedin.com/in/angela-pellillo-846a55157/"}>
                     <button className="inline-flex items-center md:text-lg lg:text-sm
-                    gap-2 border border-white bg-white text-gray-900 px-6 h-12 lg:h-10 rounded-xl hover:bg-blue-400 hover:text-white hover:border-white
+                    gap-2 border border-white bg-white text-gray-900 px-6 h-12 lg:h-10 rounded-xl hover:bg-blue-400 hover:scale-110 hover:text-white hover:border-white
                     active:scale-95 active:translate-y-0.5 active:bg-blue-500  transition duration-150 ease-in-out">
                         <span className="lg:text-xl">👋</span>
                         <span className="font-semibold lg:text-lg">Connect</span>

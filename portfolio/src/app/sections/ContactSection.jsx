@@ -9,11 +9,13 @@ export const ContactSection = ({ onOpen }) => {
                             <p className="text-sm md:text-base mt-2">Lets connect and create something amazing together etc etc etc</p>
                         </div>
                         <div>
-                            <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 
-                            rounded-xl gap-2 w-max border border-white"
+                            <button className=" group text-white bg-gray-900 inline-flex items-center px-6 h-12 
+                            rounded-xl gap-2 w-max border border-white hover:bg-purple-300 hover:scale-110 hover:text-black 
+                            active:scale-95 active:translate-y-0.5 active:bg-purple-500 duration-150 ease-in-out"
                                 onClick={onOpen}>
                                 <span className="font-semibold">Contact me</span>
-                                <svg className="w-5 h-5 text-white dark:text-white rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <svg className="w-6 h-6 text-white dark:text-white rotate-45 group-hover:text-black 
+                            active:scale-95 active:translate-y-0.5  duration-150 ease-in-out" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v13m0-13 4 4m-4-4-4 4" />
                                 </svg>
                             </button>

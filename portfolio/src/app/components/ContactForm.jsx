@@ -36,7 +36,7 @@ export const ContactForm = ({ onClose }) => {
 
     return (
 
-        <div  className='fixed grid inset-0 container  justify-center items-center  backdrop-blur-sm'>
+        <div className='fixed grid inset-0 container  justify-center items-center  backdrop-blur-sm'>
             <div className=' grid grid-rows-7 bg-white border border-black/30 rounded-2xl px-8 pb-8 lg:pb-16 bg-purple lg:h-auto lg:w-[800px] '>
                 <div className='row-span-1 flex items-center justify-end '>
                     <button onClick={onClose} type="button" class=" bg-white text-black hover:text-white rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-400 inline-flex items-center justify-center h-8 w-8 " data-dismiss-target="#toast-default" aria-label="Close">
@@ -62,7 +62,7 @@ export const ContactForm = ({ onClose }) => {
                             <label>Message</label>
                             <textarea name="message" id="" className="border p-2" placeholder='Enter Your Message' required ></textarea>
                         </div>
-                        <button type="submit" className='border mt-4 self-center px-8 py-2 rounded-lg bg-purple-400 text-white text-lg hover:bg-purple-600
+                        <button type="submit" className='border mt-4 self-center px-8 py-2 rounded-lg bg-purple-400 text-white text-lg hover:scale-110 hover:bg-purple-600
                         active:scale-95 active:translate-y-0.5 active:bg-purple-800 
              transition duration-150 ease-in-out'>Send Message</button>
                     </form>

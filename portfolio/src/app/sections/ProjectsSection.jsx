@@ -48,12 +48,12 @@ export const ProjectsSection = () => {
     return (
         <section id="projects" className='pb-16 lg:py-12'>
             <div className="container">
-                <SectionHeader eyebrow={"Real-World Results"} title={"Featured Projects"} description={"Some text content here"} />
+                <SectionHeader eyebrow={"Real-World Results"} title={"Featured Projects"} description={"A series of projects developed during the academic course, projects commissioned by clients and personal ones. "} />
                 <div className='flex flex-col mt-20 gap-32 '>
                     {portfolioProjects.map((project, projectIndex) => (
                         <Card key={project.title} className=' 
-                        px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky '
-                            style={{ top: `calc(64px + ${projectIndex * 3000}px)`, }}>
+                        px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20  '
+                        >
                             <div className='lg:grid lg:grid-cols-2 lg:gap-16' >
                                 <div className='lg:pb-16'>
                                     <div className='bg-gradient-to-r from-red-500 via-yellow-400 via-green-400 via-blue-500 to-purple-500 inline-flex 
@@ -83,12 +83,13 @@ export const ProjectsSection = () => {
                                     <hr className='border-t-2 border-black/10 mt-4 md:mt-5' />
 
                                     <div className='mt-4 md:mt-5 md:text-xl lg:text-sm'>
-                                        <p>{project.description}</p>
+                                        {project.description}
                                     </div>
                                     <div className='flex flex-col'>
                                         <PageLinks href={project.link}>
                                             <button className='bg-black mt-8 text-white md:text-xl lg:text-sm h-12 w-full md:w-auto lg:h-10 px-6 rounded-xl font-semibold 
-                                        inline-flex items-center justify-center gap-2'>
+                                        inline-flex items-center justify-center gap-2 hover:bg-green-400
+                                        hover:text-white hover:scale-110 active:scale-95 active:translate-y-0.5 active:bg-green-600 duration-150 ease-in-out'>
 
                                                 <span>View GitHub</span>
                                                 <svg className="w-6 h-6 text-white dark:text-white rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -100,7 +101,9 @@ export const ProjectsSection = () => {
                                         {project.linkYoutube && (
                                             <PageLinks href={project.linkYoutube}>
                                                 <button className='bg-black mt-8 text-white md:text-xl lg:text-sm h-12 w-full md:w-auto lg:h-10 px-6 rounded-xl font-semibold 
-                                        inline-flex items-center justify-center gap-2'>
+                                        inline-flex items-center justify-center gap-2 
+                                        hover:bg-red-600
+                                        hover:text-white hover:scale-110 active:scale-95 active:translate-y-0.5 active:bg-red-700 duration-150 ease-in-out'>
 
                                                     <span>View Youtube Video</span>
                                                     <svg className="w-6 h-6 text-white dark:text-white rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -113,7 +116,7 @@ export const ProjectsSection = () => {
 
                                 </div>
                                 <div className='relative'>
-                                    <Image src={project.image} alt={project.title} className='mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-xl'></Image>
+                                    <Image src={project.image} alt={project.title} className='mt-8 -mb-4 md:-mb-0 lg:mt-0  lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-xl'></Image>
                                 </div>
                             </div>
 
