@@ -7,8 +7,34 @@ import { PageLinks } from '../components/PageLinks';
 
 const portfolioProjects = [
     {
+        year: "2025",
+        title: "Skillerse",
+        course: "Final Year Project",
+        techStack: [
+            { title: "Unity 3D" },
+            { title: "Firebase" },
+            { title: "C#" },
+            { title: "Oculus Quest 2" },
+            { title: "Metaverse" },
+            { title: "Neocortex" },
+
+        ],
+        // link: "https://github.com/Echo3007/FanArt_ecommerce_Android/tree/master",
+        linkYoutube: "https://youtu.be/oSfgC9cfrfU",
+        image: app_ecommerce,
+        description: <p>Developed an e-commerce platform for purchasing printed copies of
+            digital art, primarily focusing on fan art and fan fiction.<br /><br /><b>Features:</b>Secure user authentication, profile management,
+            intuitive shopping UI with category filters, and seamless
+            checkout.<br /><br /><b>Challenges:</b>Resolved Firebase database structure issues and
+            enhanced stock updates and checkout functionalities.<br /><br /><b>Future Enhancements:</b>Implement order history, expand product
+            categories, and validate payment methods.</p>,
+    },
+
+
+    {
         year: "2023",
         title: "Ecommerce App",
+        course: "Web Application Development",
         techStack: [
             { title: "Android Studio" },
             { title: "Firebase" },
@@ -27,6 +53,7 @@ const portfolioProjects = [
     {
         year: "2023",
         title: "Ecommerce Website",
+        course: "Group Project",
         techStack: [
             { title: "Android Studio" },
             { title: "Firebase" },
@@ -48,7 +75,7 @@ export const ProjectsSection = () => {
     return (
         <section id="projects" className='pb-16 lg:py-12'>
             <div className="container">
-                <SectionHeader eyebrow={"Real-World Results"} title={"Featured Projects"} description={"A series of projects developed during the academic course, projects commissioned by clients and personal ones. "} />
+                <SectionHeader eyebrow={"Real-World Results"} title={"Featured Projects"} description={"A series of projects developed during the degree course, projects commissioned by clients and personal ones. "} />
                 <div className='flex flex-col mt-20 gap-32 '>
                     {portfolioProjects.map((project, projectIndex) => (
                         <Card key={project.title} className=' 
@@ -59,7 +86,7 @@ export const ProjectsSection = () => {
                                     <div className='bg-gradient-to-r from-red-500 via-yellow-400 via-green-400 via-blue-500 to-purple-500 inline-flex 
                                     gap-2 font-bold uppercase tracking-widest text-sm md:text-base lg:text-sm 
                                     text-transparent bg-clip-text text-shadow-xs'>
-                                        <span>Nome corso, materia etc</span>
+                                        <span>{project.course}</span>
                                         <span>&bull;</span>
                                         <span>{project.year}</span>
                                     </div>
@@ -86,18 +113,19 @@ export const ProjectsSection = () => {
                                         {project.description}
                                     </div>
                                     <div className='flex flex-col'>
-                                        <PageLinks href={project.link}>
-                                            <button className='bg-black mt-8 text-white md:text-xl lg:text-sm h-12 w-full md:w-auto lg:h-10 px-6 rounded-xl font-semibold 
+                                        {project.link && (
+                                            <PageLinks href={project.link}>
+                                                <button className='bg-black mt-8 text-white md:text-xl lg:text-sm h-12 w-full md:w-auto lg:h-10 px-6 rounded-xl font-semibold 
                                         inline-flex items-center justify-center gap-2 hover:bg-green-400
                                         hover:text-white hover:scale-110 active:scale-95 active:translate-y-0.5 active:bg-green-600 duration-150 ease-in-out'>
 
-                                                <span>View GitHub</span>
-                                                <svg className="w-6 h-6 text-white dark:text-white rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v13m0-13 4 4m-4-4-4 4" />
-                                                </svg>
+                                                    <span>View GitHub</span>
+                                                    <svg className="w-6 h-6 text-white dark:text-white rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v13m0-13 4 4m-4-4-4 4" />
+                                                    </svg>
 
-                                            </button>
-                                        </PageLinks>
+                                                </button>
+                                            </PageLinks>)}
                                         {project.linkYoutube && (
                                             <PageLinks href={project.linkYoutube}>
                                                 <button className='bg-black mt-8 text-white md:text-xl lg:text-sm h-12 w-full md:w-auto lg:h-10 px-6 rounded-xl font-semibold 

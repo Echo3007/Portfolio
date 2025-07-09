@@ -83,7 +83,7 @@ export const AboutSection = () => {
     return (
         <div id="about" className='py-16'>
             <div className='container'>
-                <SectionHeader eyebrow={"About Me"} title={"A Glimpse Into My World"} description={"Some description here"} />
+                <SectionHeader eyebrow={"About Me"} title={"A Glimpse Into My World"} description={"Tech Stack I ususally play around with, and hobbies I like to pursue on my free time."} />
                 <div className='mt-20 flex flex-col gap-8 '>
                     <div className='grid md:grid-cols-4 md:gap-8 gap-8'>
                         <Card className=" h-[320px] md:col-span-2 ">

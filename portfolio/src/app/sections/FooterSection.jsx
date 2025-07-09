@@ -23,7 +23,8 @@ export const FooterSection = () => {
                     <nav className='flex flex-col md:flex-row items-center gap-3'>
                         {footerLinks.map(link => (
                             <PageLinks href={link.link} key={link.title}
-                                className='inline-flex items-center gap-1.5'>
+                                className='inline-flex items-center gap-1.5 hover:scale-110 active:scale-95 
+                                active:translate-y-0.5 duration-150 ease-in-out'>
                                 <span className='font-semibold'>{link.title}</span>
                                 <ArrowComponent className='h-6 w-6 text-black'></ArrowComponent>
                             </PageLinks>
