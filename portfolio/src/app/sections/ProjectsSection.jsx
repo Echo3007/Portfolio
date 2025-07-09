@@ -3,7 +3,11 @@ import { SectionHeader } from '../components/SectionHeader';
 import { Card } from '../components/Card';
 import app_ecommerce from '../assets/app_ecommerce.png';
 import ecommerce_website from '../assets/ecommerce_website.png';
+import Skillerse from '../assets/Skillerse.jpg';
 import { PageLinks } from '../components/PageLinks';
+
+
+
 
 const portfolioProjects = [
     {
@@ -21,7 +25,8 @@ const portfolioProjects = [
         ],
         // link: "https://github.com/Echo3007/FanArt_ecommerce_Android/tree/master",
         linkYoutube: "https://youtu.be/oSfgC9cfrfU",
-        image: app_ecommerce,
+        image: Skillerse,
+        imagelg: "",
         description: <p>Developed “Skillerse” for the university final year project, a prototype
             of a VR application for students and graduates to train their soft
             skills. <br />It comprises two AI-driven NPCs to practice the STAR
@@ -146,7 +151,7 @@ export const ProjectsSection = () => {
 
                                 </div>
                                 <div className='relative'>
-                                    <Image src={project.image} alt={project.title} className='mt-8 -mb-4 md:-mb-0 lg:mt-0  lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-xl'></Image>
+                                    <Image src={project.image} alt={project.title} className='mt-8 -mb-4 md:-mb-0 lg:mt-0  lg:absolute lg:h-auto lg:w-auto lg:max-w-none rounded-xl'></Image>
                                 </div>
                             </div>
 
