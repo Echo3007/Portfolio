@@ -22,12 +22,14 @@ const portfolioProjects = [
         // link: "https://github.com/Echo3007/FanArt_ecommerce_Android/tree/master",
         linkYoutube: "https://youtu.be/oSfgC9cfrfU",
         image: app_ecommerce,
-        description: <p>Developed an e-commerce platform for purchasing printed copies of
-            digital art, primarily focusing on fan art and fan fiction.<br /><br /><b>Features:</b>Secure user authentication, profile management,
-            intuitive shopping UI with category filters, and seamless
-            checkout.<br /><br /><b>Challenges:</b>Resolved Firebase database structure issues and
-            enhanced stock updates and checkout functionalities.<br /><br /><b>Future Enhancements:</b>Implement order history, expand product
-            categories, and validate payment methods.</p>,
+        description: <p>Developed “Skillerse” for the university final year project, a prototype
+            of a VR application for students and graduates to train their soft
+            skills. <br />It comprises two AI-driven NPCs to practice the STAR
+            methodology interview and a group activity.<br />
+            <b>Features:</b> Secure user authentication, dynamic basket, guest
+            functionality, favourite lists, and seamless checkout.<br />
+            <b>Future Enhancements:</b> Avatar personalization, spatial audio, more
+            NPCs to supervise the group activity and graphics optimization.</p>,
     },
 
 
@@ -44,10 +46,10 @@ const portfolioProjects = [
         linkYoutube: "https://www.youtube.com/watch?v=9fRwIvrSFYE",
         image: app_ecommerce,
         description: <p>Developed an e-commerce platform for purchasing printed copies of
-            digital art, primarily focusing on fan art and fan fiction.<br /><br /><b>Features:</b>Secure user authentication, profile management,
+            digital art, primarily focusing on fan art and fan fiction.<br /><br /><b>Features:</b> Secure user authentication, profile management,
             intuitive shopping UI with category filters, and seamless
-            checkout.<br /><br /><b>Challenges:</b>Resolved Firebase database structure issues and
-            enhanced stock updates and checkout functionalities.<br /><br /><b>Future Enhancements:</b>Implement order history, expand product
+            checkout.<br /><br /><b>Challenges:</b> Resolved Firebase database structure issues and
+            enhanced stock updates and checkout functionalities.<br /><br /><b>Future Enhancements:</b> Implement order history, expand product
             categories, and validate payment methods.</p>,
     },
     {
@@ -61,9 +63,9 @@ const portfolioProjects = [
         ],
         link: "https://github.com/SallyGM/grp-ecommerce",
         image: ecommerce_website,
-        description: <p>Developed "Game Busters", an e-commerce platform for purchasing video game keys, using Scrum and Agile methodologies.<br /><br /><b>Features:</b>Secure user authentication, dynamic basket, guest
-            functionality, favourite lists, and seamless checkout.<br /><br /><b>Project Management:</b>Utilized Gantt charts, risk register, sprints, and
-            rotating Scrum Masters.<br /><br /><b>Future Enhancements:</b>Multifactor authentication, improved
+        description: <p>Developed "Game Busters", an e-commerce platform for purchasing video game keys, using Scrum and Agile methodologies.<br /><br /><b>Features:</b> Secure user authentication, dynamic basket, guest
+            functionality, favourite lists, and seamless checkout.<br /><br /><b>Project Management:</b> Utilized Gantt charts, risk register, sprints, and
+            rotating Scrum Masters.<br /><br /><b>Future Enhancements:</b> Multifactor authentication, improved
             search, admin panel. </p>,
     },
 
