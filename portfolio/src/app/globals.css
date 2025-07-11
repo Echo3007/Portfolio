@@ -24,21 +24,6 @@
   --font-serif: var(--font-serif);
   --color-primary: 50:#eff6ff,100:#dbeafe,200:#bfdbfe,300:#93c5fd,400:#60a5fa,500:#3b82f6,600:#2563eb,700:#1d4ed8,800:#1e40af,900:#1e3a8a,950:#172554
 
-  /* --animate-ping-large: ping-large 1s ease-in-out infinite;
-
-  @keyframes ping-large {
-    0%{
-
-      transform: scale(1);
-      opacity: 1;
-      
-    }
-    75%, 100%: {
-      transform: scale(4);
-      opacity:0;
-      
-    }
-  } */
  
 }
 
@@ -62,18 +47,43 @@
     transform: translateX(-50%);
   }
 }
+@keyframes move-right{
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 
 @layer utilities {
   .animate-ping-large {
     animation: ping-large 1s ease-in-out infinite;
   }
-
-}
-@layer utilities {
   .animate-move-left{
     animation: move-left 1s linear infinite;
   }
+   .animate-move-right{
+    animation: move-right 1s linear infinite;
+  }
+  .container {
+    @apply lg:max-w-4xl;
+    @apply px-4;
+    @apply mx-auto;
+
+  }
+    .input-box{
+    @apply flex flex-col gap-1;
+
+    @screen md{
+      @apply flex flex-row items-center gap-4
+    }
+  }
+
 }
+
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -88,15 +98,7 @@
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-@layer utilities {
-  .container {
-    @apply lg:max-w-4xl;
-    @apply px-4;
-    @apply mx-auto;
 
-    
-  }
-}
 
 label{
   font-family: var(--font-sans);
@@ -113,15 +115,5 @@ label{
 input{
   font-family: var(--font-sans);
  
-}
-
-@layer utilities{
-  .input-box{
-    @apply flex flex-col gap-1;
-
-    @screen md{
-      @apply flex flex-row items-center gap-4
-    }
-  }
 }
 

@@ -4,7 +4,6 @@ import { SectionHeader } from '../components/SectionHeader';
 import { CardHeader } from '../components/CardHeader';
 import { ToolboxItems } from '../components/ToolboxItems';
 import { Card } from '../components/Card';
-import { TechIcon } from '../components/TechIcon';
 import HTML5 from '../assets/html5.svg';
 import CSS3 from '../assets/css3.svg';
 import GitHub from '../assets/github.svg';
@@ -12,6 +11,8 @@ import JavaScript from '../assets/square-js.svg';
 import ReactIcon from '../assets/react.svg';
 import mapImage from '../assets/map.png';
 import smileMemoji from '../assets/smileMemoji.webp';
+import { motion } from 'framer-motion';
+import { useRef } from 'react';
 
 
 const toolBoxItems = [
@@ -80,10 +81,11 @@ const hobbies = [
 ]
 
 export const AboutSection = () => {
+    const constraintRef = useRef(null);
     return (
         <div id="about" className='py-16'>
             <div className='container'>
-                <SectionHeader eyebrow={"About Me"} title={"A Glimpse Into My World"} description={"Tech Stack I ususally play around with, and hobbies I like to pursue on my free time."} />
+                <SectionHeader eyebrow={"About Me"} title={"A Glimpse Into My World"} description={"Tech Stack I usually play around with, and hobbies I like to pursue on my free time."} />
                 <div className='mt-20 flex flex-col gap-8 '>
                     <div className='grid md:grid-cols-4 md:gap-8 gap-8'>
                         <Card className=" h-[320px] md:col-span-2 ">
@@ -93,13 +95,13 @@ export const AboutSection = () => {
                                 className=''
                             ></CardHeader>
                             <ToolboxItems
-                                toolBoxItems={toolBoxItems} className=''>
+                                toolBoxItems={toolBoxItems} className='' itemsWrapperClassName="animate-move-left " itemsWrapperClassStyle={{ animationDuration: "30s" }}>
 
                             </ToolboxItems>
                             <ToolboxItems
                                 toolBoxItems={toolBoxItems}
                                 className='mt-6 '
-                                itemsWrapperClassName='-translate-x-1/2'>
+                                itemsWrapperClassName=' animate-move-right' itemsWrapperClassStyle={{ animationDuration: "15s" }}>
 
                             </ToolboxItems>
 
@@ -111,18 +113,20 @@ export const AboutSection = () => {
                                 className=''
                             ></CardHeader>
 
-                            <div className='relative flex-1'>
+                            <div className='relative flex-1' ref={constraintRef}>
                                 {hobbies.map(hobby => (
-                                    <div key={hobby.title} className='inline-flex items-center gap-2 px-6  bg-gradient-to-r 
+                                    <motion.div key={hobby.title} className='inline-flex items-center gap-2 px-6  bg-gradient-to-r 
                                     from-emerald-300 to-sky-400 rounded-full py-1.5 absolute'
                                         style={{
                                             left: hobby.left,
                                             top: hobby.top
                                         }}
+                                        drag
+                                        dragConstraints={constraintRef}
                                     >
                                         <span className='font-medium text-gray-900'>{hobby.title}</span>
                                         <span>{hobby.emoji}</span>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
 
@@ -133,9 +137,12 @@ export const AboutSection = () => {
                             <Image src={mapImage} alt='Map'
                                 className='h-full w-full object-cover '></Image>
                             <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/5
-                            rounded-full bg-gradient-to-r from-emerald-300 to-sky-400
+                            rounded-full 
                             after:content-[""] after:absolute after:inset-0 after:outline after:outline-2 
                             after:-outline-offset after:rounded-full after:outline-gray-900/30'>
+                                <div className='absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping' style={{ animationDuration: "2s" }}></div>
+                                <div className='absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10'></div>
+
                                 <Image src={smileMemoji} alt='Smile Memoji'
                                     className='size-20'></Image>
                             </div>
@@ -145,6 +152,6 @@ export const AboutSection = () => {
 
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
