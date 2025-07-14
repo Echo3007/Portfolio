@@ -20,39 +20,48 @@
 #           projectId: portfolio-angela
 
 
+
 name: Deploy to Firebase Hosting on merge
 on:
   push:
     branches:
-      - main # Or your default branch name
+      - main # Or your default branch name (e.g., 'master')
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Set up Node.js environment
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Use '20' for latest Node 20, or '22' for Node 22
-          # cache: 'npm' # Consider adding this for faster future builds once successful
+          node-version: '20' # Or '22' if you prefer.
+          # cache: 'npm'
+          # cache-dependency-path: './portfolio/package-lock.json'
 
-      - name: Clean install dependencies
+      - name: Install System Dependencies for Native Modules
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y libvips-dev build-essential python3
+
+      - name: Clean Install Node.js Dependencies
         run: |
           npm cache clean --force
           npm ci --loglevel verbose
         working-directory: ./portfolio/
 
-      # If you UNCOMMENT THIS STEP, make sure 'run:' is also uncommented
-      # - name: Attempt to reinstall sharp specifically (if previous step fails)
-      #   run: npm install --os=linux --cpu=x64 sharp # <-- UNCOMMENT THIS LINE if using this step
+      # Optional: Uncomment this step ONLY IF the above 'npm ci' still fails
+      # - name: Force Reinstall Sharp (if needed)
+      #   run: npm install --os=linux --cpu=x64 sharp
       #   working-directory: ./portfolio/
 
-      - name: Build Project
+      - name: Build Next.js Project
         run: npm run build
         working-directory: ./portfolio/
 
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Deploy to Firebase Hosting (Live)
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_ANGELA }}
