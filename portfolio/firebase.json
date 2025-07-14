@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "public": "publicFirebaseHosting",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "github": {
+      "repo": "Echo3007/Portfolio",
+      "branch": "main"
+    }
+  }
+}
