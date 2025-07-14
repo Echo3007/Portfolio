@@ -20,7 +20,6 @@
 #           projectId: portfolio-angela
 
 
-
 name: Deploy to Firebase Hosting on merge
 on:
   push:
@@ -38,22 +37,20 @@ jobs:
           node-version: '20' # Use '20' for latest Node 20, or '22' for Node 22
           # cache: 'npm' # Consider adding this for faster future builds once successful
 
-      # --- START OF CHANGES FOR NATIVE MODULES ---
       - name: Clean install dependencies
         run: |
           npm cache clean --force
-          npm ci --loglevel verbose # Added verbose logging
+          npm ci --loglevel verbose
         working-directory: ./portfolio/
 
-      - name: Attempt to reinstall sharp specifically (if previous step fails)
-        # Only uncomment and use this if the above npm ci fails again.
-        # run: npm install --os=linux --cpu=x64 sharp
-        # working-directory: ./portfolio/
+      # If you UNCOMMENT THIS STEP, make sure 'run:' is also uncommented
+      # - name: Attempt to reinstall sharp specifically (if previous step fails)
+      #   run: npm install --os=linux --cpu=x64 sharp # <-- UNCOMMENT THIS LINE if using this step
+      #   working-directory: ./portfolio/
 
       - name: Build Project
         run: npm run build
         working-directory: ./portfolio/
-      # --- END OF CHANGES FOR NATIVE MODULES ---
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
