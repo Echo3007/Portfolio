@@ -20,11 +20,11 @@
 #           projectId: portfolio-angela
 
 
-name: Deploy to Firebase Hosting on merge # This is your MERGE workflow
+name: Deploy to Firebase Hosting on merge
 on:
   push:
     branches:
-      - main
+      - main # Or your default branch name
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
@@ -34,18 +34,25 @@ jobs:
       - name: Set up Node.js environment
         uses: actions/setup-node@v4
         with:
-          node-version: '20.11.1'
+          node-version: '20.11.1' # Ensure this matches your local Node.js version
 
-      # CORRECT THIS LINE FOR THE MERGE WORKFLOW
-      - name: Install dependencies and build
-        run: npm install && npm run build
-        working-directory: ./portfolio/ # <--- ADDED/CORRECTED THIS!
+      - name: Clean install dependencies
+        run: |
+          npm cache clean --force
+          npm ci
+        working-directory: ./portfolio/ # IMPORTANT: Run in your Next.js project directory
+
+      - name: Build Project
+        run: npm run build
+        working-directory: ./portfolio/ # IMPORTANT: Run in your Next.js project directory
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_ANGELA }}
-          channelId: live
+          channelId: live # Deploys to your live site
           projectId: portfolio-angela
-          # If Next.js output is 'out' (for static export), you might also need:
-          # entryPoint: ./portfolio/out # Or where your build output goes, relative to repo root
+          # entryPoint is usually NOT needed for framework-aware Next.js deployments
+          # If you were doing static export (output: 'export' in next.config.js),
+          # you might use: entryPoint: ./portfolio/out
+          # But since your next.config.js doesn't have it, Firebase will handle .next/
