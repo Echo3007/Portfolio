@@ -36,7 +36,7 @@ jobs:
         with:
           node-version: '20.11.1' # Or your desired Node.js version, e.g., '18', '22'. Check your local Node.js version with `node -v`.
 
-      - run: npm install && next build
+      - run: npm install && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
