@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { SectionHeader } from '../components/SectionHeader';
 import { Card } from '../components/Card';
-import app_ecommerce from '../assets/app_ecommerce.png';
-import ecommerce_website from '../assets/ecommerce_website.png';
-import Skillerse from '../assets/Skillerse.jpg';
+import app_ecommerce from '/public/assets/app_ecommerce.png';
+import ecommerce_website from '/public/assets/ecommerce_website.png';
+import Skillerse from '/public/assets/Skillerse.jpg';
 import { PageLinks } from '../components/PageLinks';
 
 

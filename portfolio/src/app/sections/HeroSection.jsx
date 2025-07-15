@@ -1,5 +1,5 @@
 import { PageLinks } from '../components/PageLinks';
-import ProfilePic from '../assets/profilePic.jpeg';
+import ProfilePic from '/public/assets/profilePic.jpeg';
 import Image from 'next/image';
 
 
