@@ -23,7 +23,7 @@ export const HeroSection = () => {
                 </div>
                 <div className="max-w-lg mx-auto ">
                     <h1 className="font-serif text-3xl md:text-5xl lg:text-3xl text-center mt-8 tracking-wide">Angela Pellillo</h1>
-                    <p className="mt-5 text-center text-black/80 lg:text-lg md:text-xl">First Class Degree in BSc(Hons) Computer Science at University Of West London.<br />Junior Java Backend Developer.<br />Currently working on personal projects and looking for opportunities to broaden my skillset and knowledge gained during the my degree.</p>
+                    <p className="mt-5 text-center text-black/80 lg:text-lg md:text-xl">First Class Degree in BSc(Hons) Computer Science at University Of West London.<br />Junior Java Backend Developer.<br />Currently working on personal projects and looking for opportunities to broaden my skillset and the knowledge gained during my degree.</p>
                 </div>
             </div>
             <div className="flex flex-col gap-4 md:flex-row justify-center items-center mt-8 ">
