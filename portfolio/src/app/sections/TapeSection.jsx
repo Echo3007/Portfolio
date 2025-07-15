@@ -91,8 +91,8 @@ export const TapeSection = () => {
         <div className="py-16 overflow-hidden relative">
             <div className="bg-gradient-to-r from-emerald-300 to-sky-400 -rotate-3 -mx-1 relative">
                 {/* Left and Right Gradient Fades */}
-                <div className="absolute top-0 left-0 h-full w-12 bg-gradient-to-r from-white/90 to-transparent z-10 pointer-events-none" />
-                <div className="absolute top-0 right-0 h-full w-12 bg-gradient-to-l from-white/90 to-transparent z-10 pointer-events-none" />
+                <div className="absolute top-0 left-0 h-full w-12 bg-gradient-to-r from-black/10 to-transparent z-10 pointer-events-none" />
+                <div className="absolute top-0 right-0 h-full w-12 bg-gradient-to-l from-black/10 to-transparent z-10 pointer-events-none" />
 
                 {/* Scrolling Content */}
                 <div className="flex">
