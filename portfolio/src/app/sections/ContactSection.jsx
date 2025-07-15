@@ -6,7 +6,7 @@ export const ContactSection = ({ onOpen }) => {
                     <div className="flex flex-col md:flex-row  gap-8 md:gap-16 items-center">
                         <div>
                             <h2 className="font-serif text-2xl md:text-3xl">Let's create something incredible together</h2>
-                            <p className="text-sm md:text-base mt-2">Let's connect and create something amazing together! Drop me an email and start brainstorming ideas!</p>
+                            <p className="text-sm md:text-base mt-2">Connect with me to create something amazing together. Drop me an email and let's brainstorm ideas!</p>
                         </div>
                         <div>
                             <button className=" group text-white bg-gray-900 inline-flex items-center px-6 h-12 

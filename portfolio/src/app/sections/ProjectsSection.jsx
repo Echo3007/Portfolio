@@ -40,7 +40,7 @@ const portfolioProjects = [
 
     {
         year: "2023",
-        title: "Ecommerce App",
+        title: "E-commerce App",
         course: "Web Application Development",
         techStack: [
             { title: "Android Studio" },
@@ -59,7 +59,7 @@ const portfolioProjects = [
     },
     {
         year: "2023",
-        title: "Ecommerce Website",
+        title: "E-commerce Website",
         course: "Group Project",
         techStack: [
             { title: "Android Studio" },
