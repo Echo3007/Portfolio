@@ -109,7 +109,8 @@ export const AboutSection = () => {
                         <Card className="h-[320px] flex flex-col md:col-span-2">
                             <CardHeader
                                 title='Beyond The Code'
-                                description='I love making sure I can allocate some free time to any of my hobbies every day.'
+                                description='I love making sure I can allocate some free time to any of my hobbies every day.
+                                They look a bit messy, can you rearrange them please?'
                                 className=''
                             ></CardHeader>
 
